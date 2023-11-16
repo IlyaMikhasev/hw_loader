@@ -1,0 +1,66 @@
+
+body{
+    margin:0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(72, 194, 82);
+}
+.row{
+
+    display: block;
+    
+}
+.box{    
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+img{
+    width: 150px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px 5px black;
+    
+}
+.preview{
+    position: relative;
+    top:0;
+    left:0;
+    opacity: 1;
+}
+
+.card{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+
+    transition:all 1.5s;
+}
+.box:hover .card {
+    opacity: 1;
+    transform:scale(3,3);
+}
+.box:hover .preview{
+    opacity: 0;
+}
+.box:hover .python{    
+    transform:translate(-20px,-20px);
+}
+.box:hover .white{    
+    transform:translate(-20px,20px);
+}
+.box:hover .volnistyi{    
+    transform:translate(20px,-20px);
+}
+.box:hover .endlyher{    
+    transform:translate(20px,20px);
+}
